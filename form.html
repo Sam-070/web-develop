@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Movie Tickets</title>
+</head>
+<body>
+    <header>
+        <h1><u>BOOK YOUR SHOW</u></h1>
+        <hr>
+    </header>
+    <section>
+        <h2><u>Fill your details:</u></h2>
+        <h4>Name: <input type="text"></h4>
+        <h4>Contact Number: <input type="text"></h4>
+        <hr>
+    </section>
+    <section>
+        <h2><u>Movie Show Details:</u></h2>
+        <h4>Movie Name: <input type="text"></h4>
+        <h4>Total Tickets: <input type="number"></h4>
+        <label for="seat"><b>Select your seat type: </b></label>
+        <select name="seat" id="seat">
+            <option value="balcony">Balcony</option>
+            <option value="gold">Gold</option>
+            <option value="luxury">Luxury</option>
+            <option value="executive">Executive</option>
+            <option value="economy">Economy</option>
+        </select>
+        <h4>Show Date: <input type="date"></h4>
+        <h4>Movie Slot: <input type="time"></h4>
+        <hr>
+    </section>
+    <section>
+        <h2><u>Payment Details:</u></h2>
+        <label for="pay"><b>Payment Details: </b></label>
+        <select name="pay" id="pay">
+            <option value="UPI">UPI</option>
+            <option value="Credit">Credit Card</option>
+            <option value="Debit">Debit Card</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">Confirm</button>
+        <br>
+    </section>
+</body>
+</html>
