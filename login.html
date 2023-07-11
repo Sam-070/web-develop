@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <style>
+        *{
+            font-family: Monsterrat;
+        }
+        .mycard{
+            /* height: 100%; */
+            width: 25%;
+            border-radius: 10px;
+            background-color: #dccac0;
+            box-shadow: 2px 3px 5px 3px rgba(0,0,0,0.475);
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            margin: 0; 
+            height: 100vh; 
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=");
+            background-size:cover;
+            backdrop-filter: blur(10px); 
+        }
+        .myinput{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 10px 10px;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 2px solid rgb(151, 107, 107);
+            background-color: #eee;
+        }
+        .mybtn{
+            width: 100%;
+            background-color: rgb(185, 128, 118);
+            padding: 10px 10px;
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 5px;
+            transition-property: all;
+            transition-duration: 300ms;
+        }
+        .brand{
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-align: center;
+        }    
+        .text{
+            text-align: center;
+        }
+        .mybtn:hover{
+            transform: scale(1.1) translateY(5px);
+            box-shadow: 0px -10px 10px -5px #00000058;
+        }
+        form{
+            margin-top: 50px;
+        }
+        </style>
+</head>
+<body>
+    <div class="mycard">
+        <p class="brand">Brand Logo</p>
+        <h2 class="text">Member Login</h2>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, autem?</p>
+        <form>
+            <label for="">Email Address: </label>
+            <input class="myinput" type="email">
+            <br>
+            <br>
+            <label for="">Password:</label>
+            <input class="myinput" type="password">
+            <br>
+            <br>
+            <button class="mybtn">Login</button>
+        </form>
+    </div>
+</body>
+</html>
