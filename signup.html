@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .card{
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 3px 2px rgba(68, 116, 141,0.7);
+            background-color: rgb(200, 169, 180);
+            padding: 30px;
+            width: 20%;
+            border: none;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60);
+            backdrop-filter: blur(5px);
+            background-size: cover;
+        }
+        .btn{
+            width: 100%;
+            background-color: rgb(55, 103, 138);
+            color: aliceblue;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            transition: all;
+            transition-duration: 200ms;
+            box-shadow: 2px 2px 2px 2px rgb(95, 114, 123)
+        }
+        .btn:hover{
+            transform: translateY(5px);
+        }
+        .enter{
+            background-color: rgb(205, 211, 212);
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            font-weight: 500;
+        }
+        .text{
+            font-weight: bold;
+            color: rgb(46, 56, 65);
+        }
+        h1{
+            text-align: center;
+            color: rgb(46, 56, 65) ;
+        }
+        p{
+            font-style: italic;
+            text-align: center;
+            color: rgb(46, 56, 65);
+        }
+        a{
+            text-decoration: none;
+            color: rgb(55, 103, 138);
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+            <h1>Welcome back!</h1>
+            <p>Please enter your credentials.</p>
+            <br>
+            
+            <form>
+            <label class="text" >Email ID: </label>
+                <input required type="email" class="enter" >
+                <br>
+                <br>
+            <label class="text">Password: </label>
+            <input required type="password" class="enter">
+            <br>
+            <br>
+            <br>
+            <button class="btn">LOGIN</button>
+            <p style="padding-top:15px;">Not a member? <a href="login.html">Sign up </a>now.</p>
+            </form>
+    </div>
+</body>
+</html>
