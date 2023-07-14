@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS Grids</title>
+    <style>
+        :root{
+            --theme-background: rgb(192, 230, 240);
+            --theme-text: rgb(59, 37, 81);
+        }
+        .child{
+            border: 3px solid var(--theme-text);
+            background-color: var(--theme-background);
+            padding: 20px;
+            color: var(--theme-text);
+            animation: myanimation 2s linear infinite;
+        }
+        .container{
+            display: grid;
+            /* grid-template-columns: 300px 400px 600px; */
+            /* grid-template-columns: 1fr 2fr 3fr; */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 400px);
+            gap:20px; 
+            /* row-gap: 20px; */
+            /* column-gap: 20px; */
+            background-color: rgb(45, 82, 82);
+            /* height: 100vh; */
+            height: calc(100vh - 106px);
+        }
+        .navbar{
+            background-color: var(--theme-background);
+            border: 3px solid var(--theme-text);
+            height: 100px;
+        }
+        @keyframes myanimation {
+            0%{
+                transform: translateY(-50px);
+            }
+            50%{
+                transform: translateY(50px);
+            }
+            100%{
+                transform: translateY(-50px);
+            }
+        }
+        body{
+            background-color: var(--theme-background);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    </nav>
+    <div class="container">
+        <div class="child">
+            <h1>Child 1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam consequatur incidunt quis amet maxime labore, ipsam non, similique, neque optio inventore? Nobis animi blanditiis vero eum, ullam eos eius magni, odio obcaecati temporibus corrupti dicta sed impedit. Repellat sit fuga aperiam quia iure eos! Ipsam consequatur exercitationem ab illum quae.</p>
+        </div>
+        <div class="child">
+            <h1>Child 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim expedita, obcaecati tempore illo officia sunt possimus, tempora quo assumenda, perferendis itaque ad porro facilis animi consequatur perspiciatis aut consectetur quis suscipit ex accusamus sint velit numquam? Aliquid maxime delectus quaerat quae earum totam impedit expedita praesentium? Reiciendis temporibus error odio.</p>
+        </div>
+        <div class="child">
+            <h1>Child 3</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quia dolorem delectus placeat modi, magni cum aliquid totam, ratione fuga sapiente aperiam. Nostrum, maiores? Ipsam repellat ut quibusdam sed explicabo, unde id laboriosam recusandae vero eveniet earum illo alias expedita iusto amet, porro animi voluptatibus. Placeat ullam accusamus soluta possimus?</p>
+        </div>
+        <div class="child">
+            <h1>Child 4</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique harum consectetur, fugiat, placeat ipsam saepe itaque ab amet ad deleniti culpa autem ullam quae corrupti impedit est? Alias, tempora minima? Culpa quibusdam delectus id. Ea repellat quod delectus eligendi ex, laborum vel repellendus nobis cumque modi soluta error sapiente quam?</p>
+        </div>
+        <div class="child">
+            <h1>Child 5</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus distinctio quos natus perspiciatis culpa laudantium excepturi, ex libero. Inventore in tempore animi vitae. Ut nam vel facere! Nisi voluptate magnam voluptatibus cumque vero numquam cupiditate quos eum tempora beatae assumenda ipsam labore consequuntur officia maiores, nostrum sapiente repellendus et sequi!</p>
+        </div>
+        <div class="child">
+            <h1>Child 6</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolor rem deleniti, adipisci explicabo ratione sapiente cum distinctio tempora aspernatur expedita cupiditate. Recusandae, ad assumenda. Cupiditate, mollitia. Magnam accusantium tempora alias doloribus veritatis corporis nobis numquam magni, quia qui at ea dolore dolores fugit nam doloremque enim recusandae optio similique?</p>
+        </div>
+    </div>
+</body>
+</html>
