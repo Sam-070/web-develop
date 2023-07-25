@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dev</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: 2fr 8fr 2fr;
+            grid-column-gap: 1px ;
+        }
+        header{
+            background-color: #b3b1b7;
+        }
+        body{
+            background-color: rgb(240, 239, 239);
+        }
+        .first-link{
+            text-decoration: none;
+            /* text-indent: -5vh; */
+            color: rgb(39, 38, 38);
+            font-size: larger;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        p:hover{
+            background-color: rgb(218, 221, 222);
+            font-size: large;
+        }
+        p{
+            padding: 10px 0px;
+            text-align: left;
+        }
+        .top-link{
+            color: #403e47;
+            padding: 15px;
+            font-family: Georgia, Times, 'Times New Roman', serif;
+        }
+        .side-link p a{
+            color: #403e47;
+        }
+        .side-link a:hover{
+            color: #224d97;
+        }
+        .side-link p:hover{
+            background-color: #fff;
+        }
+        .side-link h1 a{
+            color: #403e47;
+            font-weight: 700;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" style="color: #403e47;font-weight: 700;font-size: xx-large;" href="#">DEV</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+              </button>
+              <form class="d-flex justify-content-center" role="search">
+                <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-secondary" type="submit"><i class="fa-solid fa-magnifying-glass fa-beat" style="color: #151313;"></i></button>
+              </form>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <button class="btn btn-outline-success m-2"><a class="nav-link active" style="color: #ffffff;" aria-current="page" href="#"><b>Log in</b></a></button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="btn btn-outline-primary m-2"><a class="nav-link" style="color: #ffffff;" href="#"><b>Create Account</b></a></button>
+                  </li>
+                </ul> 
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="container text-center">
+            <div class="row parent">
+
+              <div class="col">
+                <div class="container-sm mt-5 p-4 bg-white border">
+                    <h4>DEV Community is a community of 1,106,435 amazing developers</h4>
+                    <br>
+                    <h6>We're a place where coders share, stay up-to-date and grow their careers.</h6>
+                    <button class="btn btn-outline-info m-2">Create account</button>
+                    <br>
+                    <button class="btn btn-outline-success">Log in</button>
+                </div>
+                <div class="container-sm mt-3">
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-house fa-fade" style="color: #f3e335;"></i> Home</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-list fa-fade" style="color: #b270a6;"></i> Listings</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-podcast fa-fade" style="color: #266de8;"></i> Podcasts</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-video fa-fade" style="color: #403e47;"></i> Videos</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-tag fa-fade" style="color: #3bb068;"></i> Tags</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-lightbulb fa-fade" style="color: #d5f04c;"></i> FAQ</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-bag-shopping fa-fade" style="color: #fb74de;"></i> Forem Shop</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-heart fa-fade" style="color: #e24040;"></i> Sponsors</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-info fa-fade" style="color: #9030df;"></i> About</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-address-book fa-fade" style="color: #42a95b;"></i> Contact</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-book fa-fade" style="color: #839ece;"></i> Guides</a></p>
+                    <p><a class="link-opacity-50-hover first-link" href="#"><i class="fa-solid fa-building fa-fade" style="color: #c27a90;"></i> Software Companies</a></p>
+                </div>
+              </div>
+
+              <div class="col-6 w-100 bg-white mt-5">
+                <nav class="navbar navbar-expand-lg mt-5 p-3">
+                    <a class="navbar-brand top-link m-4" href="#"><h2>Relevant</h2></a>
+                    <a class="navbar-brand top-link m-4" href="#"><h4>Latest</h4></a>
+                    <a class="navbar-brand top-link m-4" href="#"><h4>Top</h4></a>
+                </nav>
+                <div class="one">
+                    <img alt="img" src="https://res.cloudinary.com/practicaldev/image/fetch/s--Lr4u5OYC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z1ad2oga10spyi4mg3zo.png">
+                    <p class="m-3"><i class="fa-solid fa-user" style="color: #2899d2;"></i><b> Nevo David</b> for <b>GitHub 20k</b></p>
+                    <p><a style="color: #151313;text-decoration: none;font-weight: 500;font-size: x-large;" href="#">🚀 Building a contacts management system with NextJS, Supabase, and Flatfile 🥂</a></p>
+                    <button class="btn btn-outline-info">#webdev</button>
+                    <button class="btn btn-outline-info">#react</button>
+                    <button class="btn btn-outline-info">#javascript</button>
+                    <button class="btn btn-outline-info">#tutorial</button>
+                    <br>
+                    <br>
+                    <button class="btn btn-outline-warning" style="color: #151313;">💖🦄😲🙌🔥 125 reactions</button>
+                    <button class="btn btn-outline-warning" style="color: #151313;">🗨️ 10 comments</button>
+                    <hr>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="container-sm mt-5 p-4 bg-white">
+                    <img alt="hackathon" style="width:300px;" src="https://res.cloudinary.com/practicaldev/image/fetch/s--sHHbPqt4--/c_limit,f_auto,fl_progressive,q_auto,w_500/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ylq17e4fm8gfs75ur7nf.jpg">
+                    <div class="side-link mt-3">
+                    <h1><a class="navbar-brand" href="#">refine DEV hackathon(23)</a></h1><hr>
+                    <p><a class="navbar-brand" href="#">Competee: An online competition</a></p><hr>
+                    <p><a class="navbar-brand" href="#">Create animations with Keronate ui</a></p><hr>
+                    <p><a class="navbar-brand" href="#">Rapply: The All-in-one Job Hunting </a></p><hr>
+                    <p><a class="navbar-brand" href="#">Expense Tracker App</a></p><hr>
+                    <p><a class="navbar-brand" href="#">Unity Studio: Quick AI powered utitilies</a></p><hr>
+                    </div>
+                    <button class="btn btn-primary m-2 p-3 w-100 fw-bold">Share your Projects</button><br>
+                    <button class="btn btn-secondary w-100 m-2 fw-bold">See all posts</button>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
