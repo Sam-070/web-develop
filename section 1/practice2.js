@@ -14,8 +14,8 @@ console.log(perSq);
 //filter all prime numbers from array
 const n=[2,7,4,9,5,13,23,45,17,19];
 const primeno= n.filter(chckPrime);
-if(n==2)
-return true;
+// if(n==2)
+// return true;
 function chckPrime(n){
     for(let i=2; i<n;i++){
         if(n%i===0)

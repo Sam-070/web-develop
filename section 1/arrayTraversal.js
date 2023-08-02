@@ -5,5 +5,5 @@ for(let i=0;i<num.length; i++){
 }
 console.log('******************');
 for(let i of num){
-    console.log(i);
+    console.log(i **2);
 }
