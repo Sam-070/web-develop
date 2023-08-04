@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const StateManagement = () => {
     let count=2;
     const [likes, setLikes] = useState(1);
-
+    
   return (
     <div className='container'>
     <h1 className='text-center'>State Management</h1>

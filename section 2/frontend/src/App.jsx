@@ -6,6 +6,7 @@ import Signup from './components/Signup';
 import Navbar from './components/Navbar';
 import EventHandling from './components/EventHandling';
 import StateManagement from './components/StateManagement';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route element={ <Login/> } path='login' />
       <Route element={ <EventHandling/> } path='event' />
       <Route element={ <StateManagement/> } path='state' />
+      <Route element={ <TodoList/> } path='todo' />
       </Routes>
       
     </BrowserRouter>
