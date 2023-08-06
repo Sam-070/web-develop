@@ -22,6 +22,12 @@ const TodoList = () => {
         setTodoList([...temp]);
     }
 
+    const completeTodo = (index) => {
+        const temp = TodoList;
+        temp[index].completed = true;
+        setTodoList([...temp]);
+    }
+
   return (
     <div>
         <div className='container '>
@@ -36,10 +42,12 @@ const TodoList = () => {
                 </div>
                 <div className='card-body'>
                 <ul className='list-group'>
-                    { TodoList.map( (obj, index) => { return <li className='list-group-item'>
+                    { TodoList.map( (obj, index) => { 
+                    return <li className='list-group-item'>
+                        {obj.completed ? <span className='badge text-success'>Completed</span> : null}
                         <h4>{ obj.text }</h4>
                         <button onClick={ () => { deleteTodo(index) }} className='btn btn-danger btn-sm'>Delete</button>
-                        <button className='btn btn-success ms-2 btn-sm'>Complete Task</button>
+                        <button onClick={() => { completeTodo(index) }} className='btn btn-success ms-2 btn-sm'>Complete Task</button>
                     </li> } ) }
                 </ul>
                 </div>

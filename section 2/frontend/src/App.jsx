@@ -8,6 +8,7 @@ import EventHandling from './components/EventHandling';
 import StateManagement from './components/StateManagement';
 import TodoList from './components/TodoList';
 import Chat from './components/Chat';
+import ProductList from './components/ProductList';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route element={ <StateManagement/> } path='state' />
       <Route element={ <TodoList/> } path='todo' />
       <Route element={ <Chat/> } path='chat' />
+      <Route element={ <ProductList /> } path='list' />
       </Routes>
       
     </BrowserRouter>
