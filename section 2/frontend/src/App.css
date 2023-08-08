@@ -7,3 +7,8 @@
   border-bottom: 2px solid crimson;
   color: crimson !important;
 }
+
+.list-back{
+  background-image: url("/public/listing-back.avif");
+  background-size: cover;
+}
