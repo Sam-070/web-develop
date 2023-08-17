@@ -50,6 +50,12 @@ const ProductList = () => {
             ))}
             </select>
         
+        <input type='range' min={1000} max={50000} step={1000}
+            onChange={(e) => {
+                console.log(e.target.value);
+            }}
+        /> 
+
         </div>
     </header>
 
@@ -64,7 +70,9 @@ const ProductList = () => {
                     </div>
                 </div>    
                 <div className='col-md-9'>
+                <div className='row mt-4'>
                     {displayProducts()}
+                </div>
                 </div>
             </div>
         </div>
