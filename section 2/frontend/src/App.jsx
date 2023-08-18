@@ -9,6 +9,7 @@ import StateManagement from './components/StateManagement';
 import TodoList from './components/TodoList';
 import Chat from './components/Chat';
 import ProductList from './components/ProductList';
+import ManageUser from './components/ManageUser';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Route element={ <TodoList/> } path='todo' />
       <Route element={ <Chat/> } path='chat' />
       <Route element={ <ProductList /> } path='list' />
+      <Route element={ <ManageUser /> } path='user' />
       </Routes>
       
     </BrowserRouter>

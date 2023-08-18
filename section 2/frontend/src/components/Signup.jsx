@@ -38,8 +38,9 @@ const Signup = () => {
       repeatpass: "",
       age : ""
     },
-    onSubmit : async ( values ) => { 
+    onSubmit : async ( values, {resetForm, setSubmitting} ) => { 
       console.log(values); 
+      setSubmitting(true);
       //write code to submit form to server 
 
       const res = await fetch('http://localhost:5000/user/add', {
@@ -51,6 +52,7 @@ const Signup = () => {
       })
 
       console.log(res.status);
+      setSubmitting(false);
 
       if(res.status === 200){
       Swal.fire({
@@ -58,7 +60,7 @@ const Signup = () => {
         title: 'WellDone!',
         text: 'Registered Successfully🤩'
       })
-       navigate('/login');
+       navigate('/list');
     }else{
       Swal.fire({
         icon: 'error',
@@ -112,7 +114,7 @@ const Signup = () => {
         </div>
 
         <div className='d-flex justify-content-center'>
-        <button className='btn btn-success mt-5 rounded-pill btn-lg'>Sign Up</button>
+        <button disabled={signupForm.isSubmitting} className='btn btn-success mt-5 rounded-pill btn-lg'>Sign Up</button>
         </div>
 
         <p className='mt-3 text-center'><a href='login' className='text-decoration-none text-success fw-bold'>Log in</a></p>
