@@ -7,8 +7,10 @@ router.post('/add', (req, res) => {
 
     new Model(req.body).save()
     .then((result) => {
-        setTimeout(() => {res.json(result); },3000);
-        
+        res.json(result);
+        // setTimeout(() => {
+            
+        //  },3000);
     })
     .catch((err) => {
         console.log(err);
