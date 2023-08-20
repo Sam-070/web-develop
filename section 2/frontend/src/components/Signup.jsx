@@ -73,6 +73,26 @@ const Signup = () => {
   
   });
 
+  const uploadFile = async (e) => {
+    const file = e.target.files[0];
+
+    const fd = new FormData();
+    fd.append('myfile', file);
+
+    const res = await fetch('http://localhost:5000/util/uploadfile', {
+      method: 'POST',
+      body: fd
+    });
+    
+    console.log(res.status);
+
+    if(res.status === 200){
+      console.log('File uploaded successfully');
+    }else{
+      console.log('File upload failed');
+    }
+  }
+
 
   return (
     <div className='bg-light'>
@@ -107,6 +127,8 @@ const Signup = () => {
         <label htmlFor='' className='text-success form-label'>Repeat Password</label>
         <span style={{color: 'red', fontSize: '0.8em', marginLeft:10}}>{signupForm.touched.repeatpass && signupForm.errors.repeatpass}</span>
         <input type='password' className='form-control mb-3' onChange={signupForm.handleChange} value={signupForm.values.repeatpass} id='repeatpass'/>
+
+        <input type='file' onChange={uploadFile}/>
 
         <div className='mt-3'>
         <input type='checkbox' className='form-check-input ' id='check'/>

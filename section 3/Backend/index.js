@@ -4,6 +4,8 @@ const express = require('express');
 //importing router
 const userRouter = require('./routers/userRouter');
 const blogRouter = require('./routers/blogRouter');
+const utilRouter = require('./routers/util');
+
 const cors = require('cors');
 
 //initialize express app
@@ -19,6 +21,7 @@ app.use(cors({
 
 app.use('/user', userRouter);
 app.use('/blog', blogRouter);
+app.use('/util', utilRouter);
 
 
 // routes 
