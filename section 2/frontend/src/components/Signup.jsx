@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import mylogo from '../components/logo.png';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -28,7 +28,7 @@ import { useNavigate } from 'react-router-dom';
 const Signup = () => {
 
    const navigate = useNavigate();
-
+   const [selImg, setSelImg] = useState("");
    //initialising formik
    const signupForm = useFormik({
     initialValues: {
@@ -39,6 +39,8 @@ const Signup = () => {
       age : ""
     },
     onSubmit : async ( values, {resetForm, setSubmitting} ) => { 
+      values.avatar = selImg;
+
       console.log(values); 
       setSubmitting(true);
       //write code to submit form to server 
@@ -60,7 +62,7 @@ const Signup = () => {
         title: 'WellDone!',
         text: 'Registered Successfully🤩'
       })
-       navigate('/list');
+       navigate('/login');
     }else{
       Swal.fire({
         icon: 'error',
@@ -74,14 +76,15 @@ const Signup = () => {
   });
 
   const uploadFile = async (e) => {
+    if(!e.target.files[0]) return;
     const file = e.target.files[0];
-
+    setSelImg(file.name);
     const fd = new FormData();
     fd.append('myfile', file);
 
     const res = await fetch('http://localhost:5000/util/uploadfile', {
       method: 'POST',
-      body: fd
+      body: fd,
     });
     
     console.log(res.status);
@@ -134,7 +137,7 @@ const Signup = () => {
         <input type='checkbox' className='form-check-input ' id='check'/>
         <label className='text-success form-check-label ms-2 fst-italic' htmlFor='check'>Remember me</label>
         </div>
-
+    
         <div className='d-flex justify-content-center'>
         <button disabled={signupForm.isSubmitting} className='btn btn-success mt-5 rounded-pill btn-lg'>Sign Up</button>
         </div>

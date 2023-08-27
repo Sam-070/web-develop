@@ -23,6 +23,7 @@ app.use('/user', userRouter);
 app.use('/blog', blogRouter);
 app.use('/util', utilRouter);
 
+app.use(express.static('./uploads'));
 
 // routes 
 app.get('/',(req, res) => {

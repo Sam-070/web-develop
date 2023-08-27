@@ -4,7 +4,8 @@ const myschema = new Schema({
     username : String,
     email : String,
     password : String,
-    age : Number
+    age : Number,
+    avatar: String,
 });
 
 module.exports = model( 'users', myschema );
