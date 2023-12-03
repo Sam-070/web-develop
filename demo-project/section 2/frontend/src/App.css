@@ -1,12 +1,15 @@
-.myclass{
-  color: red;
-  background-color: yellow;
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-c{
+  background-color: rgba(170, 204, 195, 0.836)
 }
 
 .nav-item .active{
-  font-weight: bold;
-  border-bottom: 2px solid crimson;
-  color: crimson !important;
+  font-weight: 700;
+  border-bottom: 2px solid rgb(163, 107, 55);
+  color: rgb(163, 107, 55) !important;
 }
 
 .list-back{

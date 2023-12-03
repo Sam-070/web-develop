@@ -29,8 +29,8 @@ const TodoList = () => {
     }
 
   return (
-    <div>
-        <div className='container '>
+    <div className='bg-light'>
+        <div className='container'>
             <p className='display-4 fw-bold text-center'>ToDo List</p>
             <hr/>
             

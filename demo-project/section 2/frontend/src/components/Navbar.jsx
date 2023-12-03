@@ -44,9 +44,9 @@ const Navbar = () => {
   };
 
   return (
-  <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <nav className="navbar nav-c navbar-expand-lg">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">
+    <a className="navbar-brand fw-bold" href="#">
       Navbar
     </a>
     <button
@@ -67,16 +67,6 @@ const Navbar = () => {
             Home
           </NavLink>
         </li>
-        {/* <li className="nav-item">
-          <NavLink className="nav-link" to="/signup">
-            Signup
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/login">
-            Login
-          </NavLink>
-        </li> */}
         <li className="nav-item">
           <NavLink className="nav-link" to="/event">
             Event Handling
