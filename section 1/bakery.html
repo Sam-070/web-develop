@@ -1,0 +1,480 @@
+                <!doctype html>
+                <html lang="en">
+                <head>
+                    <meta charset="utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                    <title>Bakery Store</title>
+                    <style>
+                        body{
+                            background-image: linear-gradient(0deg, #0000006f, #0000006a), url(https://e0.pxfuel.com/wallpapers/221/209/desktop-wallpaper-dark-brown-abstract-background-nunny-in-2021-brown-beige-brown-aesthetic-dark-brown-gradient-thumbnail.jpg);
+                            background-size: cover;
+                            background-position: center;
+                            background-attachment: fixed;
+                        }
+                        .cards{
+                            background-color: rgba(153, 136, 115, 0.972);
+                            font-family: Georgia, Times, 'Times New Roman', serif;
+                            text-align: center;
+                            color: rgb(66, 44, 11);
+                        }
+                        .my-btn{
+                            background-color: rgba(98, 58, 29, 0.73);
+                            color: rgb(188, 170, 146);
+                            font-weight: bold;
+                            font-size: larger;
+                            transition-property: all;
+                            transition-duration: 300ms;
+                        }
+                        .my-btn:hover{
+                            transform: scaleX(1.1);
+                            color: bisque;
+                            box-shadow: 1px 2px 2px 1px rgb(25, 9, 9);
+                        }
+                        .img-c{
+                            height: 200px;
+                            overflow: hidden;
+                        }
+                        footer{
+                            padding: 30px;
+                            background-image: linear-gradient(0deg, #1f1e1ee0,#000000c9), url(https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJha2VyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60);
+                            background-size: cover;
+                            background-position: center;
+                            background-attachment: fixed;
+                            color: rgba(176, 164, 144, 0.907);
+                            font-weight: 600;
+                            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        .footer-col{
+                            flex-basis: 40%;
+                        }
+                        footer a{
+                            text-decoration: none;
+                            color:rgba(176, 164, 144, 0.907);
+                        }
+                        footer a:hover{
+                            color: antiquewhite;
+                        }
+                        .card{
+                            border: none;
+                        }
+                        header{
+                            background-image: linear-gradient(0deg, #1f1e1eaa,#0000008b), url(https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJha2VyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60);
+                            padding: 150px 0;
+                            background-size: cover;
+                            background-position: center;
+                            background-attachment: fixed;
+                        }
+                        .head-container{
+                            margin-top: 150px;
+                        }
+                        .nav-bar{
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            background-color: rgb(55, 41, 21);
+                            padding: 10px;
+                            z-index: 1;
+                        }
+                        nav a{
+                            text-decoration: none;
+                            display: block;
+                            font-size: 20px;
+                            text-align: center;
+                            padding: 10px 20px;
+                            font-weight: bold;
+                            font-family: Georgia, 'Times New Roman', Times, serif;
+                            color: rgb(198, 173, 141);
+                        }
+                        nav a:hover {
+                            color: antiquewhite;
+                        }
+                        .left-links, .right-links {
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                        }
+                        .right-links {
+                            margin-left: auto;
+                        }
+                        nav ul li{
+                            display: inline;
+                            margin-right: 10px;
+                        }
+
+                        h1{
+                            font-size: x-large;
+                        }
+                    </style>
+                    </head>
+                    <body>
+                        <header>
+                        <div class="head-container page-title">
+                            <p class="display-2 fw-bold text-center" style="color: rgb(203, 177, 131); font-family:Georgia, Times, serif;font-style: italic; text-shadow: 4px 3px 5px rgba(107, 71, 20, 0.936);"><u>Whisk & Crust Bakery</u></p>
+                        </div>
+                        <nav class="nav-bar">
+                            <ul class="left-links">
+                                <li><a href="#"><i class="fa-solid fa-house fa-beat-fade"></i> Home</a></li>
+                                <li><a href="#About"><i class="fa-solid fa-circle-info fa-beat-fade"></i> About Us</a></li>
+                                <li><a href="#Contact"><i class="fa-solid fa-phone fa-beat-fade"></i> Contact</a></li>
+                            </ul>
+                            <form class="d-flex ms-auto" role="search">
+                                <input class="form-control me-3" style="width: 370px; background-color: rgba(242, 226, 204, 0.854);" type="search" placeholder="Search item" aria-label="Search">
+                                <button class="btn" style="background-color: rgb(163, 139, 107);" type="submit"><i class="fa-solid fa-magnifying-glass fa-beat-fade"></i></button>
+                            </form>
+                            <ul class="right-links">
+                                <li><a href="#"><i class="fa-solid fa-cart-shopping fa-beat-fade"></i> My Cart</a></li>
+                                <li><a href="#"><i class="fa-solid fa-boxes-stacked fa-beat-fade"></i> Orders</a></li>
+                                <li><a href="#"><i class="fa-solid fa-user fa-beat-fade"></i> Account</a></li>
+                            </ul>
+                        </nav> 
+                        </header>
+
+                        <div class="container mt-5">
+                            <div class="row">
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://plus.unsplash.com/premium_photo-1667797527523-fd1574038753?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JvaXNzYW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Twist Croissants</h1>
+                                            <h1>₨ 180.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGN1cGNha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Chocolate Haven</h1>
+                                            <h1>₨ 120.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnJlYWR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Rustic Hearth Breads</h1>
+                                            <h1>₨ 150.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1570145820259-b5b80c5c8bd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnJvd25pZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Choco-Chip Heaven</h1>
+                                            <h1>₨ 220.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJyb3duaWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Ice-Cream Delights</h1>
+                                            <h1>₨ 280.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2018/02/03/06/45/cake-3127014_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Heavenly Bites</h1>
+                                            <h1>₨ 200.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Frosted Fantasia</h1>
+                                            <h1>₨ 880.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60v">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Buttercream Dreams</h1>
+                                            <h1>₨ 900.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Divine Layers</h1>
+                                            <h1>₨ 800.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1537029415773-e79d5d8e68d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGx1bSUyMGNha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Coffee Cake</h1>
+                                            <h1>₨ 300.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1628471036342-adf99e82f1ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGx1bSUyMGNha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Divine Cravings</h1>
+                                            <h1>₨ 450.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29va2llc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Nutty Cookies</h1>
+                                            <h1>₨ 260.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Golden Loaf</h1>
+                                            <h1>₨ 300.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2017/01/11/11/33/cake-1971552_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Frosted Delights</h1>
+                                            <h1>₨ 500.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2020/08/07/12/27/bread-5470532_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Fluffy Patisserie</h1>
+                                            <h1>₨ 430.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2018/10/04/15/19/cupcake-3723832_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Blissful Bakes</h1>
+                                            <h1>₨ 220.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2017/02/08/12/47/cake-2048732_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Cake Couture</h1>
+                                            <h1>₨ 680.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2012/08/31/21/15/blueberries-55455_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Blueberry Delight</h1>
+                                            <h1>₨ 320.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2019/03/22/14/43/bread-4073393_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Sweet Indulgence</h1>
+                                            <h1>₨ 700.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-5">
+                                    <div class="item card shadow ">
+                                        <div class="img-c">
+                                            <img class="h-100 w-100 m-auto d-block" alt="bake" src="https://cdn.pixabay.com/photo/2014/06/30/11/52/doughnut-380212_640.jpg">
+                                        </div>
+                                        <div class="card-body cards">
+                                            <h1 style="color: rgba(78, 39, 12, 0.834); font-weight: bold;">Sprinkle Spectacular</h1>
+                                            <h1>₨ 260.00</h1>
+                                        </div> 
+                                        <div class="card-footer cards">
+                                            <button class="btn my-btn w-100">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <footer>
+                        <div class="footer-col">
+                        <div id="About">
+                        <h2 style="color: rgb(194, 163, 122);">About Us</h2>
+                        <p style="font-size: large;"><i>Welcome to Whisk & Crust Bakery, where heavenly aromas and irresistible treats await. We offer wide range of services that include:</i></p>
+                        <ul>
+                        <i>
+                            <li>Freshly Baked Goods: A wide selection of artisan bread, croissants, cakes, pies, and cookies.</li>
+                            <li>Custom Cakes and Pastries: Personalized creations for weddings, birthdays, and special occasions.</li>
+                            <li>Catering and Events: Catering services for corporate events, parties, and gatherings.</li>
+                            <li>Online Ordering and Delivery: Convenient online platform for ordering and delivery of freshly baked treats.</li>
+                            <li>Baking Classes and Workshops: Educational sessions for baking enthusiasts of all skill levels.</li>
+                        </i>
+                        </ul>
+                        </div>
+                        </div>
+
+                        <div class="footer-col">
+                        <div id="Contact" >
+                        <h2 style="color: rgb(194, 163, 122);">Contact Info</h2>
+                        <i>
+                        <a href="tel:+34232234233223"><i class="fa-solid fa-phone fa-fade"></i> 68126736549</a>
+                        <br>
+                        <a href="mailto:example@example.com"><i class="fa-solid fa-envelope fa-fade"></i> wnc@gmail.com</a>
+                        <br>
+                        <p><i class="fa-solid fa-location-dot fa-fade"></i> Whisk & Crust Bakery, Lucknow, U.P., India</p>
+                        </i>
+                        </div>
+                        </div>
+                    </footer>
+                    <script src="https://unpkg.com/scrollreveal"></script>
+                    <script>
+                        ScrollReveal().reveal('.page-title',{
+                            delay: 200,
+                            origin:'bottom',
+                            distance: '50px',
+                            scale: 0.7
+                        });
+                        ScrollReveal().reveal('.card',{
+                            origin: 'top',
+                            distance: '50px',
+                            interval: 100
+                        });
+                    </script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script>
+                        VanillaTilt.init(document.querySelectorAll('.card'),{
+                            max: 5,
+                            speed: 100,
+                            scale: 1.1,
+                            glare: true,  
+                            "max-glare": 0.2, 
+                        });
+                    </script>
+                    </body>
