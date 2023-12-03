@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 import { Navigate } from 'react-router-dom';
 
 const UserAuth = ({children}) => {
-    const UserAuth = ({children}) => {
+    
         const [currentUser, setCurrentUser] = useState(
             JSON.parse(sessionStorage.getItem('user'))
         )
@@ -19,11 +19,7 @@ const UserAuth = ({children}) => {
             return <Navigate to='/login'/>
         }
     }
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  
+
 
 export default UserAuth;

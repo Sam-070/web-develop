@@ -2,6 +2,7 @@
   color: red;
   background-color: yellow;
 }
+
 .nav-item .active{
   font-weight: bold;
   border-bottom: 2px solid crimson;
@@ -21,3 +22,5 @@
   justify-content: center;
   align-items: center;
 }
+
+
