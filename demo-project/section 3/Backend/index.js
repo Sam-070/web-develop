@@ -11,7 +11,7 @@ const cors = require('cors');
 
 //initialize express app
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 //middleware
 app.use(express.json());
