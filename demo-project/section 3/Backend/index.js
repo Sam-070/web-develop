@@ -1,5 +1,6 @@
 // import express
 const express = require('express');
+const BASE_URL = process.env.BASE_URL
 
 //importing router
 const userRouter = require('./routers/userRouter');
@@ -16,7 +17,7 @@ const port = 5000;
 app.use(express.json());
 
 app.use(cors({
-    origin: [ 'http://localhost:3000']
+    origin: [ {BASE_URL}]
 }));
 
 app.use('/user', userRouter);
